@@ -1,0 +1,5 @@
+<div class="navbar">
+  <a [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a [routerLink]="['/favourites']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Favourites</a>
+  <a id="logout" (click)="logOut()">Logout</a>
+</div>
