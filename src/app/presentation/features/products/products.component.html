@@ -3,9 +3,7 @@
     <div class="card" *ngFor="let product of products">
       <div class="thumbnail"><img [src]="product.thumbnail"></div>
       <div class="data-product">
-        <p class="title">{{product.title}}
-          <button type="button" class="fav-button" (click)="addToFav(product)">Fav</button>
-        </p>
+        <p class="title">{{product.title}}</p>
         <p class="description">{{product.description}}</p>
         <p class="price">{{product.price}}</p>
       </div>

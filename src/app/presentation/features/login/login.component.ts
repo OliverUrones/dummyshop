@@ -11,6 +11,7 @@ import {Observable} from "rxjs";
 })
 export class LoginComponent {
   loginForm: FormGroup;
+  invalidForm: string | null;
   user$: Observable<IUser | null>;
   isLoading$: Observable<boolean>;
   loginError$: Observable<string | null>;
@@ -23,15 +24,16 @@ export class LoginComponent {
       username: ['', Validators.required],
       password: ['', Validators.required]
     })
+    this.invalidForm = null;
   }
 
   onSubmitLoginForm() {
-    console.warn("Inicio sesión...")
     if(this.loginForm.valid) {
       const data: ILogin = this.loginForm.value
       this.authFacade.login(data)
+      this.invalidForm = null;
     } else {
-      console.error("Formulario inválido.")
+      this.invalidForm = 'Revise los campos.'
     }
   }
 }

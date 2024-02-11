@@ -19,7 +19,7 @@ export class ProductsComponent {
       this.entities$ = this.productsFacade.entities$
     }
 
-  addToFav(product: IProduct) {
-    console.log("Voy a añadir un producto a favoritos")
-  }
+  //addToFav(product: IProduct) {
+  //  console.log("Voy a añadir un producto a favoritos")
+  //}
 }

@@ -16,6 +16,10 @@
         <p class="error-form">{{ errorMessage }}</p>
       </ng-container>
 
+      <ng-container *ngIf="invalidForm">
+        <p class="error-form">{{ invalidForm }}</p>
+      </ng-container>
+
       <button type="submit" class="button">Login</button>
     </form>
   </div>
